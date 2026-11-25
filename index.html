@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蜜祧影视官网直接观看 | 原创影视社区 - 每日更新上线</title>
+<meta name="description" content="蜜祧影视官网直接观看，汇聚原创短片、纪录片、动画与剧集，稳定的社区创作活力与每日更新内容。">
+<style>
+  :root{
+    --bg:#0b0d12;
+    --bg2:#11141d;
+    --panel:#161b26;
+    --panel2:#1d2433;
+    --line:rgba(255,255,255,.08);
+    --txt:#e8ecf4;
+    --muted:#93a0b8;
+    --acc:#ff5a8a;
+    --acc2:#ffb347;
+    --acc3:#5ec8ff;
+    --ok:#4be08a;
+    --radius:16px;
+    --shadow:0 18px 50px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:radial-gradient(1200px 600px at 15% -10%,rgba(255,90,138,.16),transparent 60%),
+               radial-gradient(1000px 500px at 90% 0%,rgba(94,200,255,.12),transparent 55%),
+               var(--bg);
+    color:var(--txt);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1200px,92vw);margin:0 auto}
+  ::selection{background:rgba(255,90,138,.35)}
+
+  /* ---------- 顶部导航 ---------- */
+  header.site{
+    position:sticky;top:0;z-index:80;
+    backdrop-filter:blur(18px);
+    background:rgba(11,13,18,.72);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;gap:28px;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:19px;white-space:nowrap}
+  .logo .mark{
+    width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(135deg,var(--acc),var(--acc2));
+    display:grid;place-items:center;color:#1a0a10;font-size:16px;font-weight:900;
+    box-shadow:0 6px 18px rgba(255,90,138,.4);
+  }
+  .logo em{font-style:normal;color:var(--acc)}
+  nav.links{display:flex;gap:6px;margin-left:8px;flex:1}
+  nav.links a{
+    padding:8px 14px;border-radius:999px;font-size:14.5px;color:var(--muted);
+    transition:.22s;white-space:nowrap;
+  }
+  nav.links a:hover{color:var(--txt);background:rgba(255,255,255,.06)}
+  nav.links a.on{color:#fff;background:rgba(255,90,138,.18);box-shadow:inset 0 0 0 1px rgba(255,90,138,.35)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    border:0;cursor:pointer;font-family:inherit;font-weight:600;font-size:14.5px;
+    padding:11px 20px;border-radius:999px;transition:.24s;white-space:nowrap;
+  }
+  .btn-primary{background:linear-gradient(135deg,var(--acc),#ff7aa2);color:#fff;box-shadow:0 10px 26px rgba(255,90,138,.35)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(255,90,138,.45)}
+  .btn-ghost{background:rgba(255,255,255,.07);color:var(--txt);box-shadow:inset 0 0 0 1px var(--line)}
+  .btn-ghost:hover{background:rgba(255,255,255,.13)}
+  .menu-tog{display:none;background:none;border:0;color:var(--txt);font-size:24px;cursor:pointer}
+
+  /* ---------- 主视觉 ---------- */
+  .hero{position:relative;padding:64px 0 46px;overflow:hidden}
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:1px;
+    background:linear-gradient(90deg,transparent,var(--line),transparent);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--acc2);
+    background:rgba(255,179,71,.1);border:1px solid rgba(255,179,71,.28);
+    padding:6px 14px;border-radius:999px;margin-bottom:20px;font-weight:600;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(75,224,138,.15);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{
+    font-size:clamp(38px,5.2vw,64px);line-height:1.1;letter-spacing:-1.5px;font-weight:900;
+    background:linear-gradient(120deg,#fff 20%,#ffc9da 55%,#ffb347 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:18px;
+  }
+  .hero p.lead{color:var(--muted);font-size:17px;max-width:520px;margin-bottom:28px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+  .hero-stats div strong{display:block;font-size:26px;font-weight:800;color:#fff;letter-spacing:-.5px}
+  .hero-stats div span{font-size:13px;color:var(--muted)}
+
+  /* 播放器卡片 */
+  .player-card{
+    position:relative;border-radius:22px;overflow:hidden;
+    background:linear-gradient(160deg,#1c2230,#0e1219);
+    box-shadow:var(--shadow);border:1px solid var(--line);
+  }
+  .screen{position:relative;aspect-ratio:16/9;overflow:hidden;background:#05070b}
+  .screen svg{width:100%;height:100%;display:block}
+  .screen .play-hint{
+    position:absolute;inset:0;display:grid;place-items:center;background:rgba(5,7,11,.35);
+    transition:.3s;
+  }
+  .screen .play-hint:hover{background:rgba(5,7,11,.15)}
+  .play-btn{
+    width:74px;height:74px;border-radius:50%;border:0;cursor:pointer;
+    background:rgba(255,255,255,.92);color:#12141a;display:grid;place-items:center;
+    box-shadow:0 12px 34px rgba(0,0,0,.5);transition:.25s;
+  }
+  .play-btn:hover{transform:scale(1.08);background:#fff}
+  .play-btn svg{width:26px;height:26px;margin-left:4px}
+  .screen-label{
+    position:absolute;left:14px;top:14px;font-size:12px;font-weight:700;
+    background:rgba(255,90,138,.9);color:#fff;padding:4px 10px;border-radius:6px;letter-spacing:.5px;
+  }
+  .screen-dur{
+    position:absolute;right:14px;bottom:12px;font-size:12px;background:rgba(0,0,0,.6);
+    padding:3px 9px;border-radius:6px;color:#dfe6f2;font-variant-numeric:tabular-nums;
+  }
+  .player-meta{padding:16px 18px;display:flex;align-items:center;gap:14px}
+  .player-meta .thumb{
+    width:52px;height:52px;border-radius:12px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--acc3),var(--acc));display:grid;place-items:center;
+    font-weight:800;font-size:13px;color:#08131c;
+  }
+  .player-meta h3{font-size:15.5px;font-weight:700;margin-bottom:2px}
+  .player-meta p{font-size:12.5px;color:var(--muted)}
+  .progress{margin:0 18px 16px;height:5px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+  .progress i{display:block;height:100%;width:38%;background:linear-gradient(90deg,var(--acc),var(--acc2));border-radius:999px;animation:grow 6s ease-in-out infinite alternate}
+  @keyframes grow{from{width:22%}to{width:64%}}
+
+  /* ---------- 滚动条幅 ---------- */
+  .ticker{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.02);overflow:hidden;padding:13px 0;
+  }
+  .ticker-track{display:flex;gap:52px;width:max-content;animation:scrollx 34s linear infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .ticker-item{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted);white-space:nowrap}
+  .ticker-item b{color:var(--txt);font-weight:600}
+  .tag-live{font-size:11px;color:#08131c;background:var(--ok);padding:2px 7px;border-radius:4px;font-weight:800}
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:72px 0;position:relative}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:38px;flex-wrap:wrap}
+  .sec-head .kicker{font-size:13px;color:var(--acc);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.8px;line-height:1.2}
+  .sec-head p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:560px}
+  .more-link{font-size:14px;color:var(--acc3);display:inline-flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap}
+  .more-link:hover{gap:11px}
+
+  /* ---------- 精选影片 ---------- */
+  .film-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .film{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;transition:.28s;display:flex;flex-direction:column;
+  }
+  .film:hover{transform:translateY(-6px);border-color:rgba(255,90,138,.4);box-shadow:0 20px 44px rgba(0,0,0,.45)}
+  .poster{position:relative;aspect-ratio:3/4;overflow:hidden;background:#0a0d13}
+  .poster svg{width:100%;height:100%}
+  .poster .play-mini{
+    position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.28s;
+    background:rgba(0,0,0,.35);
+  }
+  .film:hover .play-mini{opacity:1}
+  .play-mini span{
+    width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.92);color:#13151b;
+    display:grid;place-items:center;font-size:15px;
+  }
+  .poster .num{
+    position:absolute;left:10px;top:10px;font-size:11px;font-weight:800;
+    background:rgba(0,0,0,.55);padding:3px 8px;border-radius:6px;color:#fff;letter-spacing:.5px;
+  }
+  .poster .score{
+    position:absolute;right:10px;top:10px;font-size:12px;font-weight:800;color:var(--acc2);
+    background:rgba(0,0,0,.55);padding:3px 8px;border-radius:6px;
+  }
+  .film-body{padding:14px 15px 16px;flex:1;display:flex;flex-direction:column;gap:8px}
+  .film-body h3{font-size:15.5px;font-weight:700;line-height:1.4}
+  .film-body .desc{font-size:12.8px;color:var(--muted);line-height:1.6;flex:1}
+  .film-foot{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:2px}
+  .chip{font-size:11.5px;padding:2px 9px;border-radius:999px;background:rgba(94,200,255,.12);color:var(--acc3)}
+
+  /* ---------- 分类导航 ---------- */
+  .cat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+  .cat{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;
+    transition:.25s;text-align:left;
+  }
+  .cat:hover{background:var(--panel2);transform:translateY(-4px);border-color:rgba(94,200,255,.35)}
+  .cat .ico{
+    width:40px;height:40px;border-radius:11px;display:grid;place-items:center;margin-bottom:12px;
+    background:rgba(255,90,138,.14);color:var(--acc);font-size:18px;
+  }
+  .cat:nth-child(2) .ico{background:rgba(255,179,71,.14);color:var(--acc2)}
+  .cat:nth-child(3) .ico{background:rgba(94,200,255,.14);color:var(--acc3)}
+  .cat:nth-child(4) .ico{background:rgba(75,224,138,.14);color:var(--ok)}
+  .cat:nth-child(5) .ico{background:rgba(180,140,255,.14);color:#b48cff}
+  .cat:nth-child(6) .ico{background:rgba(255,140,120,.14);color:#ff8c78}
+  .cat h3{font-size:14.5px;font-weight:700;margin-bottom:4px}
+  .cat p{font-size:12px;color:var(--muted);line-height:1.5}
+
+  /* ---------- 更新列表 ---------- */
+  .live-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:26px}
+  .ep-list{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .ep-head{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+  .ep-head h3{font-size:16px;font-weight:700}
+  .ep-head span{font-size:12px;color:var(--muted)}
+  .ep{display:flex;align-items:center;gap:16px;padding:14px 20px;border-bottom:1px solid var(--line);transition:.22s;cursor:pointer}
+  .ep:last-child{border-bottom:0}
+  .ep:hover{background:rgba(255,255,255,.035)}
+  .ep-thumb{
+    width:84px;height:52px;border-radius:9px;flex:0 0 auto;display:grid;place-items:center;
+    font-size:11px;font-weight:800;color:#0a1017;letter-spacing:.5px;
+  }
+  .ep-info{flex:1;min-width:0}
+  .ep-info h4{font-size:14px;font-weight:600;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ep-info p{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ep-time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ep-now{
+    font-size:11px;font-weight:800;color:#08131c;background:var(--acc2);padding:3px 8px;border-radius:5px;
+  }
+  .side-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:20px}
+  .side-card h3{font-size:15px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .rank-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+  .rank-list li{display:flex;align-items:center;gap:12px;font-size:13.5px}
+  .rank-list .rk{width:22px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+  .rank-list li:nth-child(1) .rk{color:var(--acc)}
+  .rank-list li:nth-child(2) .rk{color:var(--acc2)}
+  .rank-list li:nth-child(3) .rk{color:var(--acc3)}
+  .rank-list .nm{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rank-list .hot{font-size:11.5px;color:var(--muted)}
+  .notice{font-size:13px;color:var(--muted);line-height:1.8}
+  .notice b{color:var(--acc2)}
+
+  /* ---------- 数据区 ---------- */
+  .stats-band{
+    background:linear-gradient(120deg,rgba(255,90,138,.1),rgba(94,200,255,.08));
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:52px 0}
+  .stat b{display:block;font-size:clamp(30px,4vw,44px);font-weight:900;letter-spacing:-1.5px;
+    background:linear-gradient(120deg,#fff,#ffb347);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{font-size:13.5px;color:var(--muted)}
+  .stat em{font-style:normal;font-size:15px;color:var(--txt);font-weight:700}
+
+  /* ---------- 创作者 ---------- */
+  .creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .creator{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+    transition:.25s;
+  }
+  .creator:hover{transform:translateY(-5px);border-color:rgba(255,179,71,.35)}
+  .avatar{
+    width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:19px;
+    color:#0a1017;margin-bottom:14px;
+  }
+  .creator h3{font-size:15px;font-weight:700;margin-bottom:2px}
+  .creator .role{font-size:12px;color:var(--acc2);margin-bottom:10px}
+  .creator p{font-size:12.8px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+  .creator .metas{display:flex;gap:14px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+  .creator .metas b{color:var(--txt);font-weight:700}
+
+  /* ---------- 时间线 ---------- */
+  .timeline{position:relative;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--acc),transparent)}
+  .tl-item{position:relative;margin-bottom:30px}
+  .tl-item::before{
+    content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--acc);
+  }
+  .tl-item time{font-size:12px;color:var(--acc2);font-weight:700;letter-spacing:.5px}
+  .tl-item h3{font-size:15.5px;font-weight:700;margin:4px 0 6px}
+  .tl-item p{font-size:13.5px;color:var(--muted);max-width:640px}
+
+  /* ---------- 会员方案 ---------- */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+  .plan{
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px 26px;
+    position:relative;transition:.28s;
+  }
+  .plan:hover{transform:translateY(-6px)}
+  .plan.pop{
+    background:linear-gradient(165deg,rgba(255,90,138,.16),var(--panel) 55%);
+    border-color:rgba(255,90,138,.45);box-shadow:0 20px 50px rgba(255,90,138,.16);
+  }
+  .plan .flag{
+    position:absolute;right:22px;top:-12px;font-size:11.5px;font-weight:800;letter-spacing:.5px;
+    background:linear-gradient(135deg,var(--acc),var(--acc2));color:#1a0a10;padding:4px 12px;border-radius:999px;
+  }
+  .plan h3{font-size:16px;font-weight:700;margin-bottom:6px}
+  .plan .price{font-size:38px;font-weight:900;letter-spacing:-1.5px;margin-bottom:2px}
+  .plan .price small{font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0}
+  .plan .sub{font-size:12.5px;color:var(--muted);margin-bottom:22px}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:24px}
+  .plan li{font-size:13.5px;display:flex;gap:9px;align-items:flex-start;color:var(--txt)}
+  .plan li::before{content:"✓";color:var(--ok);font-weight:900;flex:0 0 auto}
+  .plan .btn{width:100%}
+
+  /* ---------- 问答 ---------- */
+  .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .qa{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .qa h3{font-size:14.5px;font-weight:700;margin-bottom:8px;display:flex;gap:9px}
+  .qa h3 span{color:var(--acc);font-weight:900}
+  .qa p{font-size:13.2px;color:var(--muted);line-height:1.75}
+
+  /* ---------- 订阅 ---------- */
+  .subscribe{
+    background:linear-gradient(135deg,rgba(255,90,138,.14),rgba(255,179,71,.08),rgba(94,200,255,.1));
+    border:1px solid var(--line);border-radius:26px;padding:52px 44px;
+    display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;
+  }
+  .subscribe h2{font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px}
+  .subscribe p{font-size:14px;color:var(--muted);max-width:460px}
+  .sub-form{display:flex;gap:10px;flex-wrap:wrap}
+  .sub-form input{
+    background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:999px;
+    padding:13px 22px;color:var(--txt);font-family:inherit;font-size:14px;width:260px;outline:none;transition:.2s;
+  }
+  .sub-form input:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(255,90,138,.12)}
+  .sub-form input::placeholder{color:#5e6a82}
+
+  /* ---------- 页脚 ---------- */
+  footer{border-top:1px solid var(--line);padding:56px 0 30px;background:rgba(0,0,0,.25)}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:38px;margin-bottom:44px}
+  .foot-brand p{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.8;max-width:320px}
+  .foot-col h4{font-size:13.5px;font-weight:700;margin-bottom:14px}
+  .foot-col a{display:block;font-size:13px;color:var(--muted);margin-bottom:10px;transition:.2s}
+  .foot-col a:hover{color:var(--acc)}
+  .foot-bottom{
+    border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
+    gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);
+  }
+  .foot-bottom .socials{display:flex;gap:16px}
+  .foot-bottom .socials a:hover{color:var(--acc3)}
+
+  /* ---------- 回到顶部 ---------- */
+  #top{
+    position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:14px;border:0;cursor:pointer;
+    background:rgba(255,90,138,.9);color:#fff;display:grid;place-items:center;font-size:18px;
+    box-shadow:0 10px 26px rgba(255,90,138,.4);opacity:0;pointer-events:none;transition:.3s;z-index:70;
+  }
+  #top.show{opacity:1;pointer-events:auto}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .film-grid{grid-template-columns:repeat(2,1fr)}
+    .cat-row{grid-template-columns:repeat(3,1fr)}
+    .live-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+    .creator-grid{grid-template-columns:repeat(2,1fr)}
+    .plans{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    nav.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);
+      flex-direction:column;padding:14px;border-bottom:1px solid var(--line);gap:2px}
+    nav.links.open{display:flex}
+    nav.links a{padding:12px 16px}
+    .menu-tog{display:block}
+  }
+  @media(max-width:680px){
+    .film-grid{grid-template-columns:1fr}
+    .cat-row{grid-template-columns:repeat(2,1fr)}
+    .creator-grid{grid-template-columns:1fr}
+    .faq{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .subscribe{padding:34px 24px}
+    .sub-form input{width:100%}
+    .sub-form{width:100%}
+    .sub-form .btn{width:100%}
+    .hero-stats{gap:24px}
+    .nav-cta .btn-ghost{display:none}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top-anchor" class="logo"><span class="mark">蜜</span>蜜祧<em>影视</em></a>
+    <nav class="links" id="navLinks">
+      <a href="#hot" class="on">首页推荐</a>
+      <a href="#films">影片库</a>
+      <a href="#cats">分类频道</a>
+      <a href="#live">更新直播</a>
+      <a href="#creators">创作者</a>
+      <a href="#plans">会员</a>
+      <a href="#faq">帮助</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#plans" class="btn btn-ghost">登录</a>
+      <a href="#films" class="btn btn-primary">立即观看</a>
+      <button class="menu-tog" id="menuTog" aria-label="展开菜单">☰</button>
+    </div>
+  </div>
+</header>
+
+<span id="top-anchor"></span>
+
+<!-- ============ 主视觉 ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge"><span class="dot"></span>蜜祧影视 · 今日已更新 27 部作品</span>
+      <h1>蜜祧影视</h1>
+      <p class="lead">一个把镜头交给创作者的视频社区。原创短片、纪录影像、动画番剧与人物访谈在这里持续生长，蜜祧影视官网直接观看，无需跳转，点开即播。</p>
+      <div class="hero-actions">
+        <a href="#films" class="btn btn-primary">▶ 开始观看</a>
+        <a href="#creators" class="btn btn-ghost">了解创作计划</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12,480+</strong><span>收录作品</span></div>
+        <div><strong>8.6 万</strong><span>社区创作者</span></div>
+        <div><strong>326 万</strong><span>月度观看</span></div>
+        <div><strong>99.9%</strong><span>播放可用率</span></div>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <div class="screen">
+        <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="蜜祧影视首屏推荐画面">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#22162a"/>
+              <stop offset="45%" stop-color="#3a1f38"/>
+              <stop offset="100%" stop-color="#120d18"/>
+            </linearGradient>
+            <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffd27a"/>
+              <stop offset="100%" stop-color="#ff5a8a"/>
+            </linearGradient>
+            <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2b1f3a"/>
+              <stop offset="100%" stop-color="#0d0a14"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffb347" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="640" height="360" fill="url(#sky)"/>
+          <circle cx="440" cy="132" r="150" fill="url(#glow)"/>
+          <circle cx="440" cy="132" r="62" fill="url(#sun)" opacity=".95"/>
+          <g opacity=".35" fill="#fff">
+            <circle cx="90" cy="52" r="1.4"/><circle cx="150" cy="90" r="1"/>
+            <circle cx="230" cy="40" r="1.6"/><circle cx="320" cy="76" r="1.1"/>
+            <circle cx="520" cy="46" r="1.5"/><circle cx="580" cy="96" r="1"/>
+            <circle cx="60" cy="120" r="1.2"/><circle cx="380" cy="30" r="1.3"/>
+          </g>
+          <path d="M0 250 L110 208 L190 244 L280 196 L370 240 L460 206 L550 246 L640 214 L640 360 L0 360 Z" fill="url(#hill)"/>
+          <path d="M0 296 L120 262 L240 300 L360 264 L480 302 L600 270 L640 288 L640 360 L0 360 Z" fill="#08060c"/>
+          <g stroke="#ff5a8a" stroke-width="2" opacity=".55">
+            <path d="M300 250 L360 250 M330 250 L330 210"/>
+          </g>
+          <circle cx="330" cy="204" r="7" fill="#ffb347"/>
+          <rect x="0" y="322" width="640" height="38" fill="#05040a" opacity=".85"/>
+          <text x="24" y="347" font-family="sans-serif" font-size="13" fill="#93a0b8" letter-spacing="2">EP.07 · 暮色里的第七封信</text>
+        </svg>
+        <span class="screen-label">独家首播</span>
+        <span class="screen-dur">14:26</span>
+        <div class="play-hint">
+          <button class="play-btn" aria-label="播放预告片">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="player-meta">
+        <div class="thumb">PV</div>
+        <div>
+          <h3>《暮色里的第七封信》</h3>
+          <p>蜜祧自制 · 剧情短片 · 4K HDR</p>
+        </div>
+      </div>
+      <div class="progress"><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 滚动条幅 ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <div class="ticker-item"><span class="tag-live">上新</span><b>《山海拾光》</b>第二季 第 4 集已上线</div>
+    <div class="ticker-item"><b>纪录片《河岸记事》</b>进入 2024 年度精选</div>
+    <div class="ticker-item"><span class="tag-live">直播</span>本周六 20:00 导演连线观影会</div>
+    <div class="ticker-item"><b>动画合集《微小星球》</b>全集免费观看</div>
+    <div class="ticker-item"><b>新人扶持计划</b>开放第 9 期报名</div>
+    <div class="ticker-item"><b>《雾中来客》</b>登顶本周热度榜</div>
+    <div class="ticker-item"><span class="tag-live">上新</span><b>人物访谈《对话》</b>第 21 期已发布</div>
+  </div>
+</div>
+
+<!-- ============ 精选影片 ============ -->
+<section id="films">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Featured Films</div>
+        <h2>本周精选 · 值得留出半小时</h2>
+        <p>由编辑团队与社区观众共同选出的作品，涵盖剧情、纪录、动画与实验影像。每一部都可以在蜜祧影视官网直接观看。</p>
+      </div>
+      <a href="#live" class="more-link">查看全部更新 →</a>
+    </div>
+
+    <div class="film-grid">
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="暮色里的第七封信 海报">
+            <defs>
+              <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3b1f3a"/><stop offset="100%" stop-color="#120c18"/>
+              </linearGradient>
+              <radialGradient id="p1g" cx="60%" cy="38%" r="45%">
+                <stop offset="0%" stop-color="#ff9a5a" stop-opacity=".8"/>
+                <stop offset="100%" stop-color="#ff9a5a" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p1)"/>
+            <circle cx="180" cy="150" r="120" fill="url(#p1g)"/>
+            <circle cx="180" cy="150" r="46" fill="#ffcf7a"/>
+            <path d="M0 280 L70 250 L140 286 L210 252 L280 288 L300 276 L300 400 L0 400Z" fill="#150e1c"/>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">暮色里的第七封信</text>
+          </svg>
+          <span class="num">01</span><span class="score">9.2</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>暮色里的第七封信</h3>
+          <p class="desc">一封没有寄出的信，把两个相隔二十年的夏天缝在一起。</p>
+          <div class="film-foot"><span class="chip">剧情短片</span><span>14:26</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="河岸记事 海报">
+            <defs>
+              <linearGradient id="p2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0f2b3a"/><stop offset="100%" stop-color="#07121a"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p2)"/>
+            <path d="M0 250 Q75 220 150 250 T300 250 L300 400 L0 400Z" fill="#0c2634"/>
+            <path d="M0 290 Q80 262 160 292 T300 288 L300 400 L0 400Z" fill="#0a1c26"/>
+            <circle cx="90" cy="120" r="30" fill="#bfe6ff" opacity=".85"/>
+            <g stroke="#bfe6ff" stroke-width="1.5" opacity=".55">
+              <path d="M150 300 l30 -34 l30 34"/>
+              <path d="M170 300 l22 -25 l22 25"/>
+            </g>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">河岸记事</text>
+          </svg>
+          <span class="num">02</span><span class="score">9.0</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>河岸记事</h3>
+          <p class="desc">跟随一条河走过四季，记录沿岸六户人家的日常与迁徙。</p>
+          <div class="film-foot"><span class="chip">纪录影像</span><span>48:12</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="微小星球 海报">
+            <defs>
+              <radialGradient id="p3" cx="50%" cy="42%" r="52%">
+                <stop offset="0%" stop-color="#b48cff"/><stop offset="60%" stop-color="#43297a"/>
+                <stop offset="100%" stop-color="#0d0818"/>
+              </radialGradient>
+            </defs>
+            <rect width="300" height="400" fill="#0d0818"/>
+            <circle cx="150" cy="165" r="96" fill="url(#p3)"/>
+            <ellipse cx="150" cy="165" rx="146" ry="34" fill="none" stroke="#ffb347" stroke-width="3" opacity=".7" transform="rotate(-18 150 165)"/>
+            <g fill="#fff" opacity=".7">
+              <circle cx="52" cy="66" r="1.6"/><circle cx="250" cy="90" r="1.2"/>
+              <circle cx="220" cy="300" r="1.5"/><circle cx="70" cy="318" r="1.1"/>
+            </g>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">微小星球</text>
+          </svg>
+          <span class="num">03</span><span class="score">8.8</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>微小星球</h3>
+          <p class="desc">一颗只有三公里周长的星球上，住着七个不想搬家的居民。</p>
+          <div class="film-foot"><span class="chip">动画番剧</span><span>22:40</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="雾中来客 海报">
+            <defs>
+              <linearGradient id="p4" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1b2a2e"/><stop offset="100%" stop-color="#0a1214"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p4)"/>
+            <g fill="#9fd8c8" opacity=".22">
+              <ellipse cx="90" cy="180" rx="130" ry="30"/>
+              <ellipse cx="210" cy="230" rx="150" ry="26"/>
+              <ellipse cx="130" cy="280" rx="120" ry="22"/>
+            </g>
+            <g fill="#0a1214">
+              <path d="M150 130 l14 34 h-28z"/>
+              <rect x="136" y="162" width="28" height="86" rx="14"/>
+            </g>
+            <circle cx="150" cy="120" r="16" fill="#e8ecf4" opacity=".9"/>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">雾中来客</text>
+          </svg>
+          <span class="num">04</span><span class="score">8.7</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>雾中来客</h3>
+          <p class="desc">沿海小镇的浓雾里，有人每晚准点敲响同一扇门。</p>
+          <div class="film-foot"><span class="chip">悬疑剧集</span><span>36:05</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="山海拾光 海报">
+            <defs>
+              <linearGradient id="p5" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3a2410"/><stop offset="55%" stop-color="#7a3f22"/>
+                <stop offset="100%" stop-color="#150c08"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p5)"/>
+            <circle cx="150" cy="140" r="52" fill="#ffd27a" opacity=".9"/>
+            <path d="M0 240 L60 190 L120 236 L180 178 L240 232 L300 196 L300 400 L0 400Z" fill="#2a1710"/>
+            <path d="M0 300 L80 264 L160 302 L240 268 L300 296 L300 400 L0 400Z" fill="#150c08"/>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">山海拾光</text>
+          </svg>
+          <span class="num">05</span><span class="score">8.9</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>山海拾光</h3>
+          <p class="desc">沿着海岸线寻找散落的光，一档关于自然与人的慢综艺。</p>
+          <div class="film-foot"><span class="chip">纪实综艺</span><span>41:18</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="对话 海报">
+            <defs>
+              <linearGradient id="p6" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#241a33"/><stop offset="100%" stop-color="#0b0912"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p6)"/>
+            <circle cx="108" cy="160" r="42" fill="#ff5a8a" opacity=".55"/>
+            <circle cx="196" cy="200" r="42" fill="#5ec8ff" opacity=".5"/>
+            <rect x="60" y="270" width="180" height="3" fill="#ffb347" opacity=".7"/>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">对话 · 第21期</text>
+          </svg>
+          <span class="num">06</span><span class="score">8.6</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>对话 · 第21期</h3>
+          <p class="desc">和一位在片场待了三十年的摄影师聊聊光与等待。</p>
+          <div class="film-foot"><span class="chip">人物访谈</span><span>52:30</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="城市呼吸 海报">
+            <defs>
+              <linearGradient id="p7" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#101826"/><stop offset="100%" stop-color="#060a10"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p7)"/>
+            <g fill="#1d2a3d">
+              <rect x="20" y="200" width="40" height="120"/>
+              <rect x="72" y="160" width="34" height="160"/>
+              <rect x="118" y="220" width="48" height="100"/>
+              <rect x="178" y="140" width="38" height="180"/>
+              <rect x="228" y="190" width="52" height="130"/>
+            </g>
+            <g fill="#ffb347" opacity=".85">
+              <rect x="30" y="214" width="6" height="6"/><rect x="46" y="232" width="6" height="6"/>
+              <rect x="82" y="176" width="6" height="6"/><rect x="96" y="200" width="6" height="6"/>
+              <rect x="130" y="238" width="6" height="6"/><rect x="190" y="156" width="6" height="6"/>
+              <rect x="206" y="184" width="6" height="6"/><rect x="242" y="206" width="6" height="6"/>
+            </g>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700" letter-spacing="1">城市呼吸</text>
+          </svg>
+          <span class="num">07</span><span class="score">8.5</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>城市呼吸</h3>
+          <p class="desc">凌晨四点的便利店、六点的公交首班车，城市醒来的样子。</p>
+          <div class="film-foot"><span class="chip">实验影像</span><span>18:44</span></div>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="poster">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="纸上旅途 海报">
+            <defs>
+              <linearGradient id="p8" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#efe4cf"/><stop offset="100%" stop-color="#c8b89a"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#p8)"/>
+            <g stroke="#3a2f22" stroke-width="2" fill="none" opacity=".7">
+              <path d="M40 320 C90 260 120 280 150 220 S220 140 260 90"/>
+              <circle cx="150" cy="220" r="5" fill="#3a2f22"/>
+              <circle cx="260" cy="90" r="5" fill="#3a2f22"/>
+            </g>
+            <text x="24" y="352" font-family="sans-serif" font-size="15" fill="#2a2117" font-weight="700" letter-spacing="1">纸上旅途</text>
+          </svg>
+          <span class="num">08</span><span class="score">8.4</span>
+          <div class="play-mini"><span>▶</span></div>
+        </div>
+        <div class="film-body">
+          <h3>纸上旅途</h3>
+          <p class="desc">用手绘地图重走一段旧铁路，动画与实拍交替叙事。</p>
+          <div class="film-foot"><span class="chip">动画短片</span><span>11:09</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 分类 ============ -->
+<section id="cats" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Channels</div>
+        <h2>按频道浏览，找到你的那一格</h2>
+        <p>蜜祧影视把内容分成六大频道，每个频道都有独立的更新节奏与策展编辑。</p>
+      </div>
+    </div>
+    <div class="cat-row">
+      <a class="cat" href="#films"><div class="ico">剧</div><h3>剧情频道</h3><p>短剧、单元剧与实验叙事</p></a>
+      <a class="cat" href="#films"><div class="ico">纪</div><h3>纪录频道</h3><p>自然、人文与城市观察</p></a>
+      <a class="cat" href="#films"><div class="ico">漫</div><h3>动画频道</h3><p>原创番剧与独立动画</p></a>
+      <a class="cat" href="#films"><div class="ico">谈</div><h3>访谈频道</h3><p>创作者对话与幕后故事</p></a>
+      <a class="cat" href="#films"><div class="ico">综</div><h3>纪实综艺</h3><p>慢节奏生活方式节目</p></a>
+      <a class="cat" href="#films"><div class="ico">试</div><h3>实验影像</h3><p>视觉短片与声音作品</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 更新 + 榜单 ============ -->
+<section id="live" class="stats-band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Live Updates</div>
+        <h2>今日更新与实时热度</h2>
+        <p>每天 10:00 与 20:00 两次集中上新，播放数据每五分钟刷新一次。</p>
+      </div>
+      <a href="#plans" class="more-link">订阅更新提醒 →</a>
+    </div>
+    <div class="live-grid">
+      <div class="ep-list">
+        <div class="ep-head">
+          <h3>刚刚上线</h3>
+          <span>更新于 2 分钟前</span>
+        </div>
+        <div class="ep">
+          <div class="ep-thumb" style="background:linear-gradient(135deg,#ff9a5a,#3b1f3a)">EP.07</div>
+          <div class="ep-info">
+            <h4>暮色里的第七封信 · 第 7 集</h4>
+            <p>剧情短片 · 4K HDR · 中文字幕</p>
+          </div>
+          <span class="ep-now">首播</span>
+          <span class="ep-time">14:26</span>
+        </div>
+        <div class="ep">
+          <div class="ep-thumb" style="background:linear-gradient(135deg,#bfe6ff,#0f2b3a)">S2</div>
+          <div class="ep-info">
+            <h4>河岸记事 · 第二季 第 3 集</h4>
+            <p>纪录影像 · 杜比音效 · 中文字幕</p>
+          </div>
+          <span class="ep-time">46:51</span>
+        </div>
+        <div class="ep">
+          <div class="ep-thumb" style="background:linear-gradient(135deg,#b48cff,#43297a)">EP.12</div>
+          <div class="ep-info">
+            <h4>微小星球 · 第 12 集</h4>
+            <p>动画番剧 · 1080P · 中文字幕</p>
+          </div>
+          <span class="ep-time">22:40</span>
+        </div>
+        <div class="ep">
+          <div class="ep-thumb" style="background:linear-gradient(135deg,#9fd8c8,#0a1214)">EP.04</div>
+          <div class="ep-info">
+            <h4>雾中来客 · 第 4 集</h4>
+            <p>悬疑剧集 · 4K · 多语言字幕</p>
+          </div>
+          <span class="ep-time">36:05</span>
+        </div>
+        <div class="ep">
+          <div class="ep-thumb" style="background:linear-gradient(135deg,#ffd27a,#7a3f22)">EP.09</div>
+          <div class="ep-info">
+            <h4>山海拾光 · 第二季 第 4 集</h4>
+            <p>纪实综艺 · 4K HDR · 中文字幕</p>
+          </div>
+          <span class="ep-time">41:18</span>
+        </div>
+        <div class="ep">
+          <div class="ep-thumb" style="background:linear-gradient(135deg,#ff5a8a,#5ec8ff)">TALK</div>
+          <div class="ep-info">
+            <h4>对话 · 第 21 期</h4>
+            <p>人物访谈 · 高清 · 中文字幕</p>
+          </div>
+          <span class="ep-time">52:30</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="side-card">
+          <h3>🔥 热度榜 TOP 5</h3>
+          <ol class="rank-list">
+            <li><span class="rk">1</span><span class="nm">雾中来客</span><span class="hot">9.8w</span></li>
+            <li><span class="rk">2</span><span class="nm">暮色里的第七封信</span><span class="hot">8.4w</span></li>
+            <li><span class="rk">3</span><span class="nm">微小星球</span><span class="hot">7.1w</span></li>
+            <li><span class="rk">4</span><span class="nm">山海拾光</span><span class="hot">6.3w</span></li>
+            <li><span class="rk">5</span><span class="nm">河岸记事</span><span class="hot">5.7w</span></li>
+          </ol>
+        </div>
+        <div class="side-card">
+          <h3>📢 站内公告</h3>
+          <p class="notice">
+            <b>观影会预告：</b>本周六 20:00，《暮色里的第七封信》导演将在蜜祧影视官网直播间连线答疑。<br><br>
+            <b>版权说明：</b>站内作品均由创作者授权发布，未经许可请勿转载。<br><br>
+            <b>播放提示：</b>如遇卡顿，可在播放器右下角切换清晰度或刷新页面。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 数据 ============ -->
+<section style="padding:0">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>12,480+</b><span>站内收录作品总数</span></div>
+    <div class="stat"><b>326 万</b><span>每月独立观看人次</span></div>
+    <div class="stat"><b>8.6 万</b><span>活跃创作者与团队</span></div>
+    <div class="stat"><b>99.9%</b><span>播放服务可用率 <em>全年</em></span></div>
+  </div>
+</section>
+
+<!-- ============ 创作者 ============ -->
+<section id="creators">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Creators</div>
+        <h2>镜头背后的人</h2>
+        <p>蜜祧影视的每一帧画面，都来自具体的创作者。我们记录他们的名字，也愿意让更多人看见。</p>
+      </div>
+      <a href="#plans" class="more-link">加入创作计划 →</a>
+    </div>
+    <div class="creator-grid">
+      <div class="creator">
+        <div class="avatar" style="background:linear-gradient(135deg,#ff5a8a,#ffb347)">林</div>
+        <h3>林见山</h3>
+        <div class="role">导演 / 编剧</div>
+        <p>擅长把日常的细枝末节拍成有张力的故事。代表作《暮色里的第七封信》。</p>
+        <div class="metas"><span><b>6</b> 部作品</span><span><b>41.2w</b> 播放</span></div>
+      </div>
+      <div class="creator">
+        <div class="avatar" style="background:linear-gradient(135deg,#5ec8ff,#4be08a)">周</div>
+        <h3>周阡陌</h3>
+        <div class="role">纪录片摄影</div>
+        <p>长期在河流与山野之间工作，关注人与自然之间缓慢的相互塑造。</p>
+        <div class="metas"><span><b>3</b> 部作品</span><span><b>28.6w</b> 播放</span></div>
+      </div>
+      <div class="creator">
+        <div class="avatar" style="background:linear-gradient(135deg,#b48cff,#ff5a8a)">白</div>
+        <h3>白微</h3>
+        <div class="role">动画导演</div>
+        <p>用手绘的方式想象星球的边界，喜欢在宏大与微小之间反复横跳。</p>
+        <div class="metas"><span><b>9</b> 部作品</span><span><b>53.7w</b> 播放</span></div>
+      </div>
+      <div class="creator">
+        <div class="avatar" style="background:linear-gradient(135deg,#ffb347,#5ec8ff)">程</div>
+        <h3>程默</h3>
+        <div class="role">主持人 / 访谈者</div>
+        <p>《对话》栏目主理人，习惯把提问放慢，让回答自然发生。</p>
+        <div class="metas"><span><b>21</b> 期节目</span><span><b>19.4w</b> 播放</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 时间线 ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Milestones</div>
+        <h2>蜜祧影视 · 一路走来</h2>
+        <p>从一个三人放映小组，到现在持续运转的创作者社区，我们始终把「作品」放在最前面。</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <time>2020 · 春</time>
+        <h3>从一场线下放映开始</h3>
+        <p>三个人、一台投影仪、一间借来的小剧场。那是蜜祧影视的第一次放映，也是「官网直接观看」这个想法的源头。</p>
+      </div>
+      <div class="tl-item">
+        <time>2021 · 秋</time>
+        <h3>正式上线第一版站点</h3>
+        <p>首批 120 部作品入驻，确立了「创作者授权、观众免费观看」的基本模式，并开放了第一批频道编辑岗位。</p>
+      </div>
+      <div class="tl-item">
+        <time>2022 · 夏</time>
+        <h3>发起新人扶持计划</h3>
+        <p>为首次创作的年轻人提供设备、后期与发行支持，至今已进行到第 9 期，累计扶持 240 位新人导演。</p>
+      </div>
+      <div class="tl-item">
+        <time>2023 · 冬</time>
+        <h3>全站升级 4K 播放</h3>
+        <p>播放器全面支持 4K HDR 与自适应码率，移动端加载速度提升 63%，让「直接观看」真正没有等待。</p>
+      </div>
+      <div class="tl-item">
+        <time>2024 · 今</time>
+        <h3>12,480 部作品与 8.6 万创作者</h3>
+        <p>蜜祧影视官网直接观看的内容库持续扩大，每日两次上新，社区讨论与观影会每周末准时发生。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 会员 ============ -->
+<section id="plans" class="stats-band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Membership</div>
+        <h2>选择适合你的观看方式</h2>
+        <p>免费即可观看大部分作品；会员可获得更高画质、抢先看与线下观影会名额。</p>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>免费观众</h3>
+        <div class="price">¥0</div>
+        <div class="sub">永久免费，随时开始</div>
+        <ul>
+          <li>全站作品随时观看</li>
+          <li>1080P 高清画质</li>
+          <li>社区评论与收藏</li>
+          <li>每周更新提醒</li>
+        </ul>
+        <a href="#films" class="btn btn-ghost">直接观看</a>
+      </div>
+      <div class="plan pop">
+        <span class="flag">最受欢迎</span>
+        <h3>蜜祧会员</h3>
+        <div class="price">¥19<small> / 月</small></div>
+        <div class="sub">支持月付与年付，年付更划算</div>
+        <ul>
+          <li>4K HDR 超清画质</li>
+          <li>新作提前 48 小时观看</li>
+          <li>无广告纯净播放</li>
+          <li>专属会员徽章与弹幕样式</li>
+          <li>线下观影会优先报名</li>
+        </ul>
+        <a href="#films" class="btn btn-primary">开通会员</a>
+      </div>
+      <div class="plan">
+        <h3>创作者支持</h3>
+        <div class="price">¥68<small> / 月</small></div>
+        <div class="sub">面向团队与深度影迷</div>
+        <ul>
+          <li>包含会员全部权益</li>
+          <li>幕后花絮与导演手记</li>
+          <li>作品片尾署名支持者</li>
+          <li>参与季度选片投票</li>
+          <li>创作工作坊参与资格</li>
+        </ul>
+        <a href="#creators" class="btn btn-ghost">了解详情</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">FAQ</div>
+        <h2>常见问题</h2>
+        <p>关于观看、画质与版权的常见疑问，先在这里找找答案。</p>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="qa">
+        <h3><span>Q</span>蜜祧影视官网直接观看需要注册吗？</h3>
+        <p>不强制注册。大部分作品打开页面即可播放；收藏、评论与观看历史需要登录，免费注册即可使用。</p>
+      </div>
+      <div class="qa">
+        <h3><span>Q</span>播放卡顿怎么办？</h3>
+        <p>播放器会根据网络自动调整码率。若仍然卡顿，可手动切换到 720P，或暂停几秒等待缓冲完成。</p>
+      </div>
+      <div class="qa">
+        <h3><span>Q</span>站内作品可以转载吗？</h3>
+        <p>所有作品均由创作者授权发布，版权归原作者所有。转载请注明出处并联系我方取得授权，禁止商用二次剪辑。</p>
+      </div>
+      <div class="qa">
+        <h3><span>Q</span>如何把作品投稿到蜜祧影视？</h3>
+        <p>通过页面底部的「创作者中心」提交作品信息，编辑团队会在 5 个工作日内回复，通过后安排上线与推荐位。</p>
+      </div>
+      <div class="qa">
+        <h3><span>Q</span>会员可以随时取消吗？</h3>
+        <p>可以。会员按自然月计费，取消后权益持续到当前周期结束，不会产生额外扣费，也不会影响已收藏的内容。</p>
+      </div>
+      <div class="qa">
+        <h3><span>Q</span>为什么有的作品看不到？</h3>
+        <p>部分作品受授权期限与地区限制，页面会显示下架或暂不可用的提示。我们会在版权恢复后第一时间重新上架。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 订阅 ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h2>每周一封片单邮件</h2>
+        <p>编辑精选、上新提醒与幕后故事，每周三送达。不打扰，只推荐真正值得看完的作品。</p>
+      </div>
+      <form class="sub-form" id="subForm">
+        <input type="email" placeholder="输入你的邮箱地址" aria-label="邮箱地址" required>
+        <button type="submit" class="btn btn-primary">订阅片单</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top-anchor" class="logo"><span class="mark">蜜</span>蜜祧<em>影视</em></a>
+        <p>蜜祧影视是一个以原创影像为核心的视频社区。我们相信好作品值得被完整地看完，也相信创作者应该被清楚地看见。</p>
+      </div>
+      <div class="foot-col">
+        <h4>观看</h4>
+        <a href="#films">影片库</a>
+        <a href="#live">今日更新</a>
+        <a href="#cats">分类频道</a>
+        <a href="#plans">会员方案</a>
+      </div>
+      <div class="foot-col">
+        <h4>社区</h4>
+        <a href="#creators">创作者中心</a>
+        <a href="#creators">新人扶持计划</a>
+        <a href="#faq">帮助与反馈</a>
+        <a href="#live">观影会</a>
+      </div>
+      <div class="foot-col">
+        <h4>关于</h4>
+        <a href="#top-anchor">品牌介绍</a>
+        <a href="#faq">版权说明</a>
+        <a href="#faq">隐私政策</a>
+        <a href="#faq">服务条款</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 蜜祧影视 · 保留所有权利 · 沪ICP备00000000号</span>
+      <div class="socials">
+        <a href="#top-anchor">微博</a>
+        <a href="#top-anchor">bilibili</a>
+        <a href="#top-anchor">小红书</a>
+        <a href="#top-anchor">RSS</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+  // 移动端菜单
+  var menuTog = document.getElementById('menuTog');
+  var navLinks = document.getElementById('navLinks');
+  if (menuTog) {
+    menuTog.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+  }
+  navLinks.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') navLinks.classList.remove('open');
+  });
+
+  // 滚动条幅无缝复制
+  var track = document.getElementById('tickerTrack');
+  if (track) {
+    track.innerHTML += track.innerHTML;
+  }
+
+  // 返回顶部
+  var topBtn = document.getElementById('top');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 600) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+  });
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 订阅表单
+  var subForm = document.getElementById('subForm');
+  subForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var input = subForm.querySelector('input');
+    var btn = subForm.querySelector('button');
+    if (!input.value) return;
+    btn.textContent = '已订阅 ✓';
+    btn.style.background = 'linear-gradient(135deg,#4be08a,#5ec8ff)';
+    btn.style.color = '#08131c';
+    input.value = '';
+    setTimeout(function () {
+      btn.textContent = '订阅片单';
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 2600);
+  });
+
+  // 导航高亮
+  var sections = ['films', 'cats', 'live', 'creators', 'plans', 'faq'];
+  var linkEls = navLinks.querySelectorAll('a');
+  window.addEventListener('scroll', function () {
+    var pos = window.scrollY + 120;
+    var current = '';
+    sections.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el && el.offsetTop <= pos) current = id;
+    });
+    linkEls.forEach(function (a) {
+      var href = a.getAttribute('href').replace('#', '');
+      if (href === current) a.classList.add('on');
+      else a.classList.remove('on');
+    });
+  });
+
+  // 影片卡片点击提示播放
+  document.querySelectorAll('.film').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var title = card.querySelector('h3').textContent;
+      var poster = card.querySelector('.play-mini span');
+      if (poster) poster.textContent = '✓';
+      setTimeout(function () { if (poster) poster.textContent = '▶'; }, 1200);
+      console.log('播放：' + title);
+    });
+  });
+
+  // 主视觉播放按钮
+  var playBtn = document.querySelector('.play-btn');
+  if (playBtn) {
+    playBtn.addEventListener('click', function () {
+      var hint = document.querySelector('.play-hint');
+      var label = document.querySelector('.screen-label');
+      if (label) label.textContent = '播放中';
+      hint.style.opacity = '0';
+      setTimeout(function () {
+        hint.style.opacity = '';
+        if (label) label.textContent = '独家首播';
+      }, 2000);
+    });
+  }
+</script>
+</body>
+                </html>
